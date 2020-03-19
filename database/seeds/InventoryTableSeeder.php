@@ -16,7 +16,7 @@ class InventoryTableSeeder extends Seeder
         $csv->setHeaderOffset(0);
 
         foreach ($csv->getRecords() as $product) {
-            DB::table('inventory')->insert($product);
+            DB::table('inventories')->insert($product);
         }
     }
 }
