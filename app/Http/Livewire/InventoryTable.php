@@ -14,11 +14,18 @@ class InventoryTable extends TableComponent
 
     public $footer_view = 'inventory.table-footer';
 
+    public $count;
+
     public function query()
     {
-        return Inventory::query()->with('product')->whereHas('product', function(Builder $query) {
-            $query->where('admin_id', '=', Auth::id());
+        $inventory = Inventory::query()->with('product')->whereHas('product', function(Builder $query) {
+            $query->where('products.admin_id', '=', Auth::id());
         });
+
+        $this->count = $inventory->count();
+
+        return $inventory;
+
     }
 
     public function columns()
@@ -34,5 +41,10 @@ class InventoryTable extends TableComponent
             Column::make('Cost', 'cost_cents')->view('inventory.table-cost'),
             Column::make()->view('inventory.table-actions')
         ];
+    }
+
+    public function getCount()
+    {
+        return $this->count;
     }
 }

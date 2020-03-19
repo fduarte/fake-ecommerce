@@ -1,1 +1,4 @@
-<p>Total: {{ number_format($model->count()) }}</p>
+<p>
+Total Records:
+{{ \App\Http\Livewire\InventoryTable::getCount() }}
+</p>
