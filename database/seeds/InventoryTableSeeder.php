@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use League\Csv\Reader;
+use Illuminate\Support\Facades\DB;
 
 class InventoryTableSeeder extends Seeder
 {

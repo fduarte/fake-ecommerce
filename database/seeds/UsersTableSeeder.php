@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use League\Csv\Reader;
-use \Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
 {
