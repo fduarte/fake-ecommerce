@@ -30,7 +30,7 @@ class InventoryController extends Controller
         $inventory = Inventory::findOrFail($id);
         $inventory->delete();
 
-        return Redirect::to('/')
+        return Redirect::to('/inventory')
             ->with('success', 'Inventory deleted.');
     }
 }
