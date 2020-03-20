@@ -2,6 +2,16 @@
 
 This is a Laravel based full stack fake ecommerce app. 
 
+## Installation
+1. vagrant up
+2. copy the .env-example to .env
+3. composer install
+4. npm install && npm run dev
+(3 and 4 might be part of the provisioning process)
+5. Configure local hosts: 192.168.10.10 fake-ecommerce.test
+6. php artisan migrate
+7. php artisan db:seed
+
 ## Features:
 
 ### A. Setup
