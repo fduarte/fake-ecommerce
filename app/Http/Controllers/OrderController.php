@@ -14,23 +14,12 @@ class OrderController extends Controller
         return view('order.index');
     }
 
-    public function edit($id)
-    {
-        $inventory = Inventory::where(['id' => $id])->first();
-        return view('order.edit', compact( 'inventory'));
-    }
-
-    public function create()
-    {
-        return view('order.create');
-    }
-
     public function destroy($id)
     {
         $order = Order::findOrFail($id);
         $order->delete();
 
-        return Redirect::to('/order')
+        return Redirect::to('/orders')
             ->with('success', 'Order deleted.');
     }
 }

@@ -14,12 +14,10 @@ use \Illuminate\Support\Facades\Auth;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
+// Register / Login routes
 Auth::routes();
 
+// Authenticated user is redirected here
 Route::get('/', 'HomeController@index')->name('home');
 
 // Products
@@ -32,16 +30,9 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/product/{id}/destroy', 'ProductController@destroy')->name('product.destroy');
 });
 
-
-//Route::get('/', 'ProductController@index')->name('product.index')->middleware('auth');
-
 // Orders
 Route::middleware(['auth'])->group(function() {
     Route::get('/orders', 'OrderController@index')->name('order.index');
-    Route::get('/order/create', 'OrderController@create')->name('order.create');
-    Route::post('/order/store', 'OrderController@store')->name('order.store');
-    Route::get('/order/{id}/edit', 'OrderController@edit')->name('order.edit');
-    Route::post('/order/update', 'OrderController@update')->name('order.update');
     Route::get('/order/{id}/destroy', 'OrderController@destroy')->name('order.destroy');
 });
 
