@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">About this app</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <p>This is a Laravel based full stack fake ecommerce app.</p>
+                    <p>
+                        Author: <a href="https://about.me/freddyduarte">Freddy Duarte</a> <br />
+                        Code: <a href="https://github.com/fduarte/fake-ecommerce" />Github</p>
+                    </p>
+
                 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="item-nav"><a class="nav-link" href="/">Products</a></li>
+                        <li class="item-nav"><a class="nav-link" href="/products">Products</a></li>
                         <li class="item-nav"><a class="nav-link" href="/orders">Orders</a></li>
                         <li class="item-nav"><a class="nav-link" href="/inventory">Inventory</a></li>
                     </ul>
