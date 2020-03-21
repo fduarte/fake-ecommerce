@@ -50,7 +50,7 @@ class CreateOrdersTable extends Migration
             $table->index('inventory_id');
             $table->foreign('inventory_id')
                 ->references('id')
-                ->on('inventory')
+                ->on('inventories')
                 ->onDelete('cascade');
 
             $table->timestamps();

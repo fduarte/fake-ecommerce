@@ -2,6 +2,8 @@
 
 This is a Laravel based full stack fake ecommerce app. 
 
+Hosted at: http://fake-ecommerce.freddyduarte.com
+
 ## Installation
 1. vagrant up
 2. copy the .env-example to .env
